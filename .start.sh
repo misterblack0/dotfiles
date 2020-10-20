@@ -1,25 +1,26 @@
 #!/bin/bash
-# Marius's Development Machine Setup on Linux Mint
+# Marius's Development Machine Setup on Linux
 # Author : Marius
 
-sudo apt-get update
-sudo apt install software-properties-common apt-transport-https curl
-sudo apt-get install build-essential git
+sudo apt update
+sudo apt upgrade -y
 
-# Neovim
-sudo apt-get install neovim
+#dependencies.list
+sudo apt install curl build-essential software-properties-common wget
 
-# Nodejs & npm
-sudo apt install nodejs
-sudo apt install npm
+#Install programs from repo
+sudo apt install git gimp npm virtualbox telegram-desktop nodejs ffmpeg ssh symlinks -y
+
+sudo apt install apt-transport-https
+sudo apt-get install git
 
 # Visual Studio Code
 sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
-sudo apt update
-sudo apt install code
+sudo apt-get update
+sudo apt-get install code
 
 # Brave Browser
 curl -s https://brave-browser-apt-release.s3.brave.com/brave-core.asc | sudo apt-key --keyring /etc/apt/trusted.gpg.d/brave-browser-release.gpg add -
 echo "deb [arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main" | sudo tee /etc/apt/sources.list.d/brave-browser-release.list
-sudo apt update
-sudo apt install brave-browser
+sudo apt-get update
+sudo apt-get install brave-browser
