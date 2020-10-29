@@ -9,9 +9,11 @@ echo
 echo "Installing repositories..."
 echo
 sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
-sudo add-apt-repository ppa:otto-kesselgulasch/gimp
+sudo add-apt-repository ppa:ubuntuhandbook1/gimp
 sudo add-apt-repository ppa:deadsnakes/ppa
 
+curl -s https://brave-browser-apt-release.s3.brave.com/brave-core.asc | sudo apt-key --keyring /etc/apt/trusted.gpg.d/brave-browser-release.gpg add -
+echo "deb [arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main" | sudo tee /etc/apt/sources.list.d/brave-browser-release.list
 ###################################
 # Update and Upgrade
 ###################################
@@ -37,16 +39,18 @@ echo
 
 ## system
 ### important
-sudo apt-get install htop ncdu tasksel gparted p7zip-full p7zip-rar curl wget software-properties-common apt-transport-https -y
+sudo apt-get install htop ncdu build-essential tasksel gparted p7zip-full p7zip-rar curl wget software-properties-common apt-transport-https gnupg -y
 ### desktop
-sudo apt-get install gimp virtualbox -y
-### pdf tools
+sudo apt-get install gimp gimp-gmic virtualbox -y
+### browser
+sudo apt-get install brave-browser -y
 ### tools
 ### torrent and direct download
 ## developing
 sudo apt-get install python -y
 ### compilers and IDEs
-sudo apt-get install build-essential code -y
+wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
+sudo apt-get install code -y
 ### libraries
 ### python
 ### repositories
