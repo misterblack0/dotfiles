@@ -48,6 +48,7 @@ sudo apt-get install chromium brave-browser -y
 ### torrent and direct download
 ## developing
 sudo apt-get install python -y
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.0/install.sh | bash
 ### compilers and IDEs
 wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
 sudo apt-get install code -y
