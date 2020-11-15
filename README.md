@@ -6,4 +6,4 @@
 
 ## Utilities for installing software
 
-* [post_install.sh](post_install.sh): Installation of many packages in a fresh Mint.
+* [post_install.sh](post_install.sh): Installation of many packages in a fresh Mint and renaming of the default folder names
