@@ -1,5 +1,15 @@
 #!/bin/bash
 
+# Rename default folder names
+
+mv /home/$USER/Desktop/Downloads /home/$USER/Desktop/downloads
+mv /home/$USER/Documents /home/$USER/documents
+mv /home/$USER/Music /home/$USER/music
+mv /home/$USER/Pictures /home/$USER/pictures
+mv /home/$USER/Public /home/$USER/public
+mv /home/$USER/Videos /home/$USER/videos
+mv /home/$USER/Templates /home/$USER/templates
+
 # Installation of many packages in a fresh Mint
 
 ###################################
