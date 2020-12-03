@@ -1,13 +1,17 @@
 # List Apps to install here
-ESSENTIAL_APPS='htop nano inxi powertop powerline solaar tlp gparted screenfetch youtube-dl'
-DEVELOPER_APPS='android-tools-adb android-tools-fastboot git npm nodejs ctags gcc make'
-PYTHON3_APPS='python3 python3-pip python3-dev'
-EXTRA_APPS='weechat gtkhash notify-os'
+
+# ESSENTIAL_APPS='htop nano inxi powertop powerline solaar tlp gparted screenfetch youtube-dl'
+# DEVELOPER_APPS='android-tools-adb android-tools-fastboot git npm nodejs ctags gcc make'
+# EXTRA_APPS='weechat gtkhash notify-os'
+
+ESSENTIAL_APPS='htop nano tlp powerline build-essential gparted tasksel screenfetch curl wget software-properties-common apt-transport-https'
+DEVELOPER_APPS='git npm nodejs vim virtualbox python make'
+EXTRA_APPS='chromium brave-browser filezilla'
+
 INSPACE=' '
 
 # Combine all app vars
 APPS_INSTALL=$ESSENTIAL_APPS$INSPACE$DEVELOPER_APPS
-APPS_INSTALL=$APPS_INSTALL$INSPACE$PYTHON3_APPS
 APPS_INSTALL=$APPS_INSTALL$INSPACE$EXTRA_APPS
 
 echo "Current system..."
@@ -19,6 +23,11 @@ echo -n "Press ENTER to continue or Ctrl-c to quit."
 read
 echo ""
 echo ""
+
+# Remove programs not used
+echo "Removing programs not used..."
+
+sudo apt-get remove hexchat hexchat-common thunderbird -y
 
 # Update system
 sudo apt update

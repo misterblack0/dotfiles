@@ -49,7 +49,7 @@ echo
 
 ## system
 ### important
-sudo apt-get install htop ncdu build-essential tasksel gparted p7zip-full p7zip-rar curl wget software-properties-common apt-transport-https gnupg -y
+sudo apt-get install htop ncdu build-essential tasksel gparted curl wget software-properties-common apt-transport-https -y
 ### desktop
 sudo apt-get install gimp gimp-gmic vim virtualbox -y
 ### browser
