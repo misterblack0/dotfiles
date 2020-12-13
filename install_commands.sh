@@ -1,3 +1,5 @@
+#!/bin/bash
+
 npm i -D eslint \
          prettier \
          eslint-plugin-react \
